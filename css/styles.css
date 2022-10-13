@@ -254,6 +254,24 @@ body {
     /* background: var(--background-footer); */
 }
 
+/* .overlay */ .hero {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid black;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+    url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #C4C4C4;
+}
+
 .hero-title {
 
     font-weight: 900;
@@ -332,7 +350,35 @@ body {
 
 .features > .item {
         width: 270px; 
-        }    
+}
+
+.features > .item::before {
+    display: block;
+    content: "";
+    height: 120px;
+    /* margin-right: 10px; */
+    background: #F5F4FA;
+    border-radius: 4px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-antenna::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.icon-watch::before {
+    background-image: url(../images/watch.svg);
+}
+
+.icon-schedule::before {
+    background-image: url(../images/schedule.svg);
+}
+
+.icon-astronaut::before {
+    background-image: url(../images/astronaut\ 1.png);
+}
 
 .features-title {
 
@@ -411,6 +457,33 @@ body {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
+}
+
+/* --- постійні клієнти --- */
+
+.client {
+    /* list-style: none; */
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.client-item {
+    padding: 16px 32px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+}
+
+.client-item:hover,
+.client-item:focus {
+    padding: 16px 32px;
+    border: 1px solid #2196F3;
+    border-radius: 4px;
+
+}
+
+.client > .client-item + .client-item {
+    margin-left: 30px;
 }
 
 /* --- footer --- */
@@ -583,3 +656,14 @@ body {
 */
 
 
+
+/* використовується тільки для не інтерактивних елементів */
+/* .class::before {
+    content: "";
+    width: 10px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #FFFFFF;
+    background-image: url();
+    background-size: contain;
+} */
