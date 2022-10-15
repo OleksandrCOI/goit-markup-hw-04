@@ -469,17 +469,17 @@ body {
 }
 
 .client-item {
-    padding: 16px 32px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    align-content: center;
-    align-items:center;
-    align-self:center;
+    padding: 0;
+
 }
 
-.client-item:hover,
-.client-item:focus {
-    padding: 16px 32px;
+.button-client {
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.button-client:hover,
+.button-client:focus {
     border: 1px solid #2196F3;
     border-radius: 4px;
 
@@ -488,6 +488,16 @@ body {
 .client > .client-item + .client-item {
     margin-left: 30px;
 }
+
+.button-icon {
+    fill: #AFB1B8;
+}
+
+.button-icon:hover, .button-icon:focus {
+    fill: #2196F3;
+}
+
+/*! fill="#afb1b8" style="fill:var(--color5, #afb1b8)"  */
 
 /* --- footer --- */
 
