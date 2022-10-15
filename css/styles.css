@@ -465,6 +465,7 @@ body {
 .client {
     /* list-style: none; */
     display: flex;
+    
     /* justify-content: space-between; */
 }
 
@@ -476,6 +477,9 @@ body {
 .button-client {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    padding: 10px, 10px;
+    width: 170px;
+    height: 92px;
 }
 
 .button-client:hover,
@@ -491,10 +495,13 @@ body {
 
 .button-icon {
     fill: #AFB1B8;
+    width: 106px; 
+    height: 60px;
 }
 
 .button-icon:hover, .button-icon:focus {
     fill: #2196F3;
+    
 }
 
 /*! fill="#afb1b8" style="fill:var(--color5, #afb1b8)"  */
