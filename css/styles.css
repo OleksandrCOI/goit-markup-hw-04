@@ -47,12 +47,13 @@ address {
 }
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
+
 }
 
 body {
     position: relative;
-    /* width: 1600px; */
-    /* height: 1880px; */
 
     font-family: "Roboto";
 
@@ -365,11 +366,11 @@ body {
 }
 
 .icon-antenna::before {
-    background-image: url(../images/antenna.svg);
+    background-image: url("../images/symbol-defs.svg#icon-antenna-1");
 }
 
 .icon-watch::before {
-    background-image: url(../images/watch.svg);
+    background-image: url(../images/symbol-defs.svg#icon-clock-1);
 }
 
 .icon-schedule::before {
@@ -471,7 +472,9 @@ body {
     padding: 16px 32px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-
+    align-content: center;
+    align-items:center;
+    align-self:center;
 }
 
 .client-item:hover,
@@ -655,6 +658,28 @@ body {
 }
 */
 
+
+
+
+
+
+/*  live server
+Привчайтесь використовувати його завжди. Для центрування іконок всередені батьківскіх елементів використовуйте флекс:подмигивание: Центрування марджинами і падінгами, не дуже вірне рішення, тому що при збільшення батьківского блоку, або при зміні ширини/висоти іконки у вас може все попливсти. */
+
+/* Додайте align-items: baseline; до загального діву */
+
+/* Для тега img задаємо властивості
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
+
+
+
+/* Inna
+2 д. назад
+Для початку потрібно svg огорнути лінком <a> бо логотипи це посилання на компанії. Йому задати колір, бордер, падінги та ін. А svg задати display: block; fill: currentColor; Трохи не розумію навіщо ви ще раз прописали розміри для свг в класі ? Ви ж їх проставили в самій свг. */
 
 
 /* використовується тільки для не інтерактивних елементів */
