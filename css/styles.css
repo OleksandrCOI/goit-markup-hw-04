@@ -23,6 +23,7 @@
     --post-tel-color: rgba(255, 255, 255, 0.6);
     --background-button-color: #F5F4FA;
     --background-footer: #2F303A;
+    --icon-color: #afb1b8;
 }
 
 p,
@@ -80,6 +81,10 @@ body {
 }
 
 .list {
+    list-style: none;
+}
+
+.item {
     list-style: none;
 }
 
@@ -202,22 +207,53 @@ body {
 
 .top-auth {
     display: flex;
+    justify-content: baseline;
+    align-items: center;
     margin-left: auto;
-    list-style: none;
-
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     }
 .top-auth .item+.item {
-    margin-left: 50px;
-    }
-.top-auth .link {
-    display: block;
+    margin-left: 30px;
+}
+
+.auth-item {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.auth-mail, .auth-tel, .auth-icon-mail, .auth-icon-tel { 
+    /* display: block; */
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
+.auth-icon-mail {
+    /* display: block; */
+    content: "";
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: var(--title-text-color);
+}
+
+.auth-icon-tel {
+    /* display: block; */
+    content: "";
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: var(--title-text-color);
+}
+
+.auth-icon-mail:hover, .auth-icon-mail:focus,
+.auth-icon-tel:hover, .auth-icon-tel:focus {
+    fill: var(--accent-color);
+}
+
 .auth-mail {
 
     font-weight: 500;
@@ -225,8 +261,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
 
-    color:var(--title-text-color)
-
+    color:var(--title-text-color);
     }
 
 .auth-tel {
@@ -236,9 +271,9 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
 
-    color:var(--title-text-color)
-
+    color:var(--title-text-color);
 }
+
 
 .auth-mail:hover, .auth-tel:hover,
 .auth-mail:focus, .auth-tel:focus
@@ -252,10 +287,7 @@ body {
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-    /* background: var(--background-footer); */
-}
 
-/* .overlay */ .hero {
     max-width: 1600px;
     height: 600px;
     margin-left: auto;
@@ -349,36 +381,23 @@ body {
     margin-left: 30px;
     }
 
-.features > .item {
+/* .features > .item {
         width: 270px; 
-}
+} */
 
-.features > .item::before {
-    display: block;
-    content: "";
-    height: 120px;
-    /* margin-right: 10px; */
+.features-container {
     background: #F5F4FA;
     border-radius: 4px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    display: flex;
+    justify-content: center;
+    padding: 25px 100px;
+    margin-bottom: 30px;
 }
 
-.icon-antenna::before {
-    background-image: url("../images/symbol-defs.svg#icon-antenna-1");
-}
-
-.icon-watch::before {
-    background-image: url(../images/symbol-defs.svg#icon-clock-1);
-}
-
-.icon-schedule::before {
-    background-image: url(../images/schedule.svg);
-}
-
-.icon-astronaut::before {
-    background-image: url(../images/astronaut\ 1.png);
+.features-icon {
+    /* display: block; */
+    width: 70px;
+    height: 70px;
 }
 
 .features-title {
@@ -460,6 +479,85 @@ body {
     letter-spacing: 0.03em;
 }
 
+.team-soial {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 16px;
+    
+}
+
+.soial-item {
+    /* padding: 10px 12px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.link-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-icon + .team-icon {
+    margin-left: 10px;
+}
+
+.team-icon {
+    display: flex;
+    
+    width: 44px;
+    height: 44px;
+    padding: 1px;
+    /* border-radius: 50%; */
+    fill: var(--icon-color);
+    background-color: var(--background-color);
+}
+
+.team-icon:hover, .team-icon:focus {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--hero-text-color);
+    background-color: var(--accent-background-color);
+} 
+
+/* .team-icon:hover, .team-icon:focus {
+    fill: var(--hero-text-color);
+}
+
+.soial-item:hover, .soial-item:focus {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--accent-background-color);
+} */
+
+/* .auth-item {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.auth-mail, .auth-tel, .auth-icon-mail, .auth-icon-tel { 
+    
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.auth-icon-mail {
+    
+    content: "";
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: var(--title-text-color);
+} */
+
 /* --- постійні клієнти --- */
 
 .client {
@@ -474,7 +572,10 @@ body {
 
 }
 
-.button-client {
+.link-client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     padding: 10px, 10px;
@@ -482,8 +583,8 @@ body {
     height: 92px;
 }
 
-.button-client:hover,
-.button-client:focus {
+.link-client:hover,
+.link-client:focus {
     border: 1px solid #2196F3;
     border-radius: 4px;
 
@@ -493,18 +594,20 @@ body {
     margin-left: 30px;
 }
 
-.button-icon {
+.link-icon {
     fill: #AFB1B8;
     width: 106px; 
     height: 60px;
-}
-
-.button-icon:hover, .button-icon:focus {
-    fill: #2196F3;
+    /* fill: currentColor; */
     
 }
 
-/*! fill="#afb1b8" style="fill:var(--color5, #afb1b8)"  */
+.link-icon:hover, .link-icon:focus {
+    fill: var(--accent-color);
+    
+}
+
+/*! fill="#afb1b8" style="fill:var(--color5, #afb1b8)" fill="#fff" style="fill:var(--color4, #fff)"  */
 
 /* --- footer --- */
 
@@ -581,6 +684,68 @@ body {
 {
     color: var(--accent-color);
 }
+
+.footer {
+    display: flex;
+    /* align-items: center; */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.soial-container {
+    margin-left: 70px;
+}
+
+.bottom-title {
+
+}
+
+.bottom-soial-list {
+    display: flex;
+    
+}
+
+/* 
+
+.soial-item {
+    padding: 10px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.link-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-icon + .team-icon {
+    margin-left: 10px;
+}
+
+
+
+.team-icon {
+    display: flex;
+    
+    width: 44px;
+    height: 44px;
+    padding: 1px;
+    border-radius: 50%;
+    fill: var(--icon-color);
+    background-color: var(--background-color);
+}
+
+.team-icon:hover, .team-icon:focus {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--hero-text-color);
+    background-color: var(--accent-background-color); */
 
 /* !--- поротфоліо --- інша сторінка --- */
 
@@ -697,15 +862,3 @@ img {
 /* Inna
 2 д. назад
 Для початку потрібно svg огорнути лінком <a> бо логотипи це посилання на компанії. Йому задати колір, бордер, падінги та ін. А svg задати display: block; fill: currentColor; Трохи не розумію навіщо ви ще раз прописали розміри для свг в класі ? Ви ж їх проставили в самій свг. */
-
-
-/* використовується тільки для не інтерактивних елементів */
-/* .class::before {
-    content: "";
-    width: 10px;
-    height: 20px;
-    margin-right: 10px;
-    background-color: #FFFFFF;
-    background-image: url();
-    background-size: contain;
-} */
